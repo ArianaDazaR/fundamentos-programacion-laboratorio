@@ -1,7 +1,7 @@
 #include <stdio.h>
 
 int main () {
-    char nombre, carrera[50];
+    char nombre[50], carrera[50];
     int edad, semestre;
 
     printf("----Sistema de Datos----\n");
@@ -30,4 +30,5 @@ int main () {
 
 return 0;
 }
+
 
