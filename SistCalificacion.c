@@ -26,11 +26,11 @@ int main () {
     proyefpond = proyef*0.2;
     promediofinal=lab1pond+lab2pond+lab3pond+examtpond+proyefpond;
 
-    printf ("\n--Registro de Calificaciones--\n");
+    printf ("\n\n--Registro de Calificaciones--\n");
 
     printf ("\nLABORATORIO 1\tLABORATORIO 2\tLABORATORIO 3\tEXAM TEORICO\tPROYECTO\tPROMEDIO\n");
     printf ("------------------------------------------------------------------------------------------------\n");
-    printf ("%.2f\t\t\%.2f\t\t\t\%.2f\t\t\%.2f\t\t\%.2f\t\t\%.2f\t\t", lab1pond, lab2pond, lab3pond, examtpond, proyefpond, promediofinal);
+    printf ("%.2f\t\t\%.2f\t\t\%.2f\t\t\%.2f\t\t\%.2f\t\t\%.2f\t\t", lab1pond, lab2pond, lab3pond, examtpond, proyefpond, promediofinal);
 
       if (promediofinal < 51){
         printf ("\n\nEstudiante reprobado");
