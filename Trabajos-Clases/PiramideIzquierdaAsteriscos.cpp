@@ -3,8 +3,7 @@ using namespace std;
 
 int main() {
 
-    int altura;
-    int i, k;
+    int altura, i, k;
 
     cout << "Que altura tendra la piramide?: ";
     cin >> altura;
