@@ -2,7 +2,8 @@
 #include <iomanip>
 using namespace std;
 
-void mostrarMenu (int &opcion, int &meses);
+void mostrarMenu (int &opcion);
+void leerMeses (int &meses);
 float obtenerPrecio (int opcion);
 float calcularSubtotal (float precio, int meses);
 float calcularDescuento (int meses, float subtotal);
@@ -12,21 +13,16 @@ int main () {
     int opcion, meses;
     float precio, subtotal, montofinal;
 
-    mostrarMenu (opcion, meses);
+    mostrarMenu (opcion);
+    leerMeses (meses);
     precio = obtenerPrecio(opcion);
     subtotal = calcularSubtotal(precio, meses);
     montofinal = calcularDescuento(meses, subtotal);
     TotalPagar (montofinal);
 }
 
-void mostrarMenu (int &opcion, int &meses) {
+void mostrarMenu (int &opcion) {
     cout << "Bienvenido al Sistema\n";
-    cout << "\nMeses que desea asistir: ";
-    cin >> meses;
-    while (meses < 0) {
-        cout << "Meses invalidos. Intente de nuevo: ";
-        cin >> meses;
-    }
     cout << "\nSeleccione su plan mensual:\n";
     cout << "1. Basico\n";
     cout << "2. Intermedio\n";
@@ -36,6 +32,15 @@ void mostrarMenu (int &opcion, int &meses) {
         cout << "Opcion invalida. Intente de nuevo: ";
         cin >> opcion;
     }
+}
+
+void leerMeses (int &meses) {
+    cout << "\nMeses que desea asistir: ";
+        cin >> meses;
+        while (meses < 0) {
+            cout << "Meses invalidos. Intente de nuevo: ";
+            cin >> meses;
+        }
 }
 
 float obtenerPrecio(int opcion) {
@@ -60,7 +65,7 @@ float calcularDescuento (int meses, float subtotal) {
         cout << "Descuento aplicado: Bs.-" << fixed << setprecision (2) << subtotal*0.15 << endl;
         return subtotal * 0.85;
     } else {
-        cout << "No aplica a descuento." << endl;
+        cout << "\nNo aplica a descuento." << endl;
         return subtotal;
     }
 }
